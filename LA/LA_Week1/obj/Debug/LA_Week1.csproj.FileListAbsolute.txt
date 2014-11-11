@@ -1,0 +1,6 @@
+C:\Users\Niek Willems\Documents\GitHub\LA\LA\LA_Week1\bin\Debug\LA_Week1.exe.config
+C:\Users\Niek Willems\Documents\GitHub\LA\LA\LA_Week1\bin\Debug\LA_Week1.exe
+C:\Users\Niek Willems\Documents\GitHub\LA\LA\LA_Week1\bin\Debug\LA_Week1.pdb
+C:\Users\Niek Willems\Documents\GitHub\LA\LA\LA_Week1\obj\Debug\LA_Week1.csprojResolveAssemblyReference.cache
+C:\Users\Niek Willems\Documents\GitHub\LA\LA\LA_Week1\obj\Debug\LA_Week1.exe
+C:\Users\Niek Willems\Documents\GitHub\LA\LA\LA_Week1\obj\Debug\LA_Week1.pdb
