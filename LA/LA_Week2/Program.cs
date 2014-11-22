@@ -10,11 +10,42 @@ namespace LA_Week2
     {
         static void Main(string[] args)
         {
-            //Opdracht1();
+            // Opdracht 1
+            Console.WriteLine("Opdracht 1:");
+            Opdracht1();
+            Console.WriteLine("");
 
+            // Opdracht 2e
+            Console.WriteLine("Opdracht 2e:");
             Opdracht2();
+            Console.WriteLine("");
+
+            // Opdracht 3b
+            Console.WriteLine("Opdracht 3b:");
+            Matrix velocityMatrix;
+            double velocity;
+            Console.WriteLine("Enter velocity:");
+            if (Double.TryParse(Console.ReadLine(), out velocity))
+            {
+                velocityMatrix = Scale(velocity);
+                velocityMatrix.Show();
+            }
+            Console.WriteLine("");
 
             Console.Read();
+        }
+
+        private static Matrix Scale(double velocity)
+        {
+            double sx = 1 + velocity / 200;
+            double sy = 1 - velocity / 400;
+            Matrix m = new Matrix(2, 2);
+            m.PutValue(0, 0, sx);
+            m.PutValue(1, 0, 0);
+            m.PutValue(0, 1, 0);
+            m.PutValue(1, 1, sy);
+
+            return m;
         }
 
         private static void Opdracht2()
