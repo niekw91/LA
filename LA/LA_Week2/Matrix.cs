@@ -12,6 +12,15 @@ namespace LA_Week2
         public int Rows { get; set; }
         public double[][] Data { get; set; }
 
+        public Matrix()
+        {
+            Rows = 2;
+            Columns = 2;
+
+            Data = new double[Rows][];
+            Data[0] = new double[Columns];
+        }
+
         public Matrix(int col, int row)
         {
             Columns = col;
