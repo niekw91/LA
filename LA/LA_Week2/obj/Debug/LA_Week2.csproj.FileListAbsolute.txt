@@ -1,0 +1,5 @@
+C:\Users\Niek Willems\Documents\GitHub\LA\LA\LA_Week2\bin\Debug\LA_Week2.exe.config
+C:\Users\Niek Willems\Documents\GitHub\LA\LA\LA_Week2\bin\Debug\LA_Week2.exe
+C:\Users\Niek Willems\Documents\GitHub\LA\LA\LA_Week2\bin\Debug\LA_Week2.pdb
+C:\Users\Niek Willems\Documents\GitHub\LA\LA\LA_Week2\obj\Debug\LA_Week2.exe
+C:\Users\Niek Willems\Documents\GitHub\LA\LA\LA_Week2\obj\Debug\LA_Week2.pdb

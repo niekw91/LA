@@ -31,6 +31,7 @@ namespace LA_Week1
         {
             b = g != 0 ? h / g : 0;
             a = f - (b * e);
-        }
+        }
+
     }
 }
