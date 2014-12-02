@@ -43,19 +43,16 @@ namespace LA_Week2
 
             Matrix matrix = new Matrix(n.Columns, n.Rows);
 
-            int vectorColumn = 0;
-            while (n.Columns > vectorColumn)
+            for (int i = 0; i < Rows; i++)
             {
-                for (int i = 0; i < Rows; i++)
+                for (int c = 0; c < n.Columns; c++)
                 {
                     for (int j = 0; j < Columns; j++)
                     {
-                        matrix.Data[i][vectorColumn] += (Data[i][j] * n.Data[j][vectorColumn]);
+                        matrix.Data[i][c] += (Data[i][j] * n.Data[j][c]);
                     }
                 }
-                vectorColumn++;
             }
-
             return matrix;
         }
 

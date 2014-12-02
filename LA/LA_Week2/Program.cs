@@ -65,8 +65,8 @@ namespace LA_Week2
 
             Console.WriteLine("Rotatiematrix");
             Matrix r = new Matrix(3, 3);
-            r.PutValue(0, 0, 0.6);
-            r.PutValue(1, 0, 0.8);
+            r.PutValue(0, 0, 0.8);
+            r.PutValue(1, 0, 0.6);
             r.PutValue(2, 0, 0);
             r.PutValue(0, 1, -0.6);
             r.PutValue(1, 1, 0.8);
@@ -90,7 +90,7 @@ namespace LA_Week2
             t2.Show();
 
             Console.WriteLine("Result");
-            Matrix result = t1.Multiply(t2.Multiply(r));
+            Matrix result = t2.Multiply(r).Multiply(t1);
             result.Show();
         }
 
