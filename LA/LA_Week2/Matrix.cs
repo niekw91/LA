@@ -67,8 +67,9 @@ namespace LA_Week2
                 {
                     Console.Write("[{0}]", Data[i][j]);
                 }
-                Console.WriteLine();
+                Console.WriteLine("");
             }
+            Console.WriteLine("");
         }
     }
 }

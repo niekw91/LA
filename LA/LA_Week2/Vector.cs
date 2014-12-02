@@ -32,32 +32,32 @@ namespace LA_Week2
             }
         }
 
-        public Vector(int a1, int a2)
+        public Vector(params int[] a)
         {
-            Rows = 2;
+            Rows = a.Length;
             Columns = 1;
 
             Data = new double[Rows][];
-            for (int i = 0; i <= Columns; i++ )
+            for (int i = 0; i < Rows; i++ )
                 Data[i] = new double[Columns];
 
-            Data[0][0] = a1;
-            Data[1][0] = a2;
+            for (int i = 0; i < Rows; i++ )
+                Data[i][0] = a[i];
         }
 
-        public Vector(int a1, int a2, int a3)
-        {
-            Rows = 3;
-            Columns = 1;
+        //public Vector(int a1, int a2, int a3)
+        //{
+        //    Rows = 3;
+        //    Columns = 1;
 
-            Data = new double[Rows][];
-            for (int i = 0; i <= Columns; i++)
-                Data[i] = new double[Columns];
+        //    Data = new double[Rows][];
+        //    for (int i = 0; i <= Columns; i++)
+        //        Data[i] = new double[Columns];
 
-            Data[0][0] = a1;
-            Data[1][0] = a2;
-            Data[2][0] = a3;
-        }
+        //    Data[0][0] = a1;
+        //    Data[1][0] = a2;
+        //    Data[2][0] = a3;
+        //}
 
         public void PutValue(int row, double value)
         {

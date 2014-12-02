@@ -12,7 +12,7 @@ namespace LA_Week2
         {
             // Opdracht 1
             Console.WriteLine("Opdracht 1:");
-            Opdracht1();
+            //Opdracht1();
             Console.WriteLine("");
 
             // Opdracht 2e
@@ -50,19 +50,47 @@ namespace LA_Week2
 
         private static void Opdracht2()
         {
-            Matrix m = new Matrix(2, 2);
-            m.PutValue(0, 0, 0.8);
-            m.PutValue(1, 0, 0.6);
-            m.PutValue(0, 1, -0.6);
-            m.PutValue(1, 1, 0.8);
+            Console.WriteLine("Translatiematrix 1");
+            Matrix t1 = new Matrix(3, 3);
+            t1.PutValue(0, 0, 1);
+            t1.PutValue(1, 0, 0);
+            t1.PutValue(2, 0, 0);
+            t1.PutValue(0, 1, 0);
+            t1.PutValue(1, 1, 1);
+            t1.PutValue(2, 1, 0);
+            t1.PutValue(0, 2, 25);
+            t1.PutValue(1, 2, 50);
+            t1.PutValue(2, 2, 1);
+            t1.Show();
 
-            Vector v = new Vector(25,50);
+            Console.WriteLine("Rotatiematrix");
+            Matrix r = new Matrix(3, 3);
+            r.PutValue(0, 0, 0.6);
+            r.PutValue(1, 0, 0.8);
+            r.PutValue(2, 0, 0);
+            r.PutValue(0, 1, -0.6);
+            r.PutValue(1, 1, 0.8);
+            r.PutValue(2, 1, 0);
+            r.PutValue(0, 2, 0);
+            r.PutValue(1, 2, 0);
+            r.PutValue(2, 2, 1);
+            r.Show();
 
-            m.Show();
-            v.Show();
+            Console.WriteLine("Translatiematrix 2");
+            Matrix t2 = new Matrix(3, 3);
+            t2.PutValue(0, 0, 1);
+            t2.PutValue(1, 0, 0);
+            t2.PutValue(2, 0, 0);
+            t2.PutValue(0, 1, 0);
+            t2.PutValue(1, 1, 1);
+            t2.PutValue(2, 1, 0);
+            t2.PutValue(0, 2, -25);
+            t2.PutValue(1, 2, -50);
+            t2.PutValue(2, 2, 1);
+            t2.Show();
 
-            Matrix result = m.Multiply(v);
-
+            Console.WriteLine("Result");
+            Matrix result = t1.Multiply(t2.Multiply(r));
             result.Show();
         }
 
