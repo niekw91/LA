@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LA_Week2
+namespace LA_Week4
 {
     public class Vector : Matrix
-    {        
+    {
         public Vector()
         {
             Rows = 2;
@@ -38,10 +38,10 @@ namespace LA_Week2
             Columns = 1;
 
             Data = new double[Rows][];
-            for (int i = 0; i < Rows; i++ )
+            for (int i = 0; i < Rows; i++)
                 Data[i] = new double[Columns];
 
-            for (int i = 0; i < Rows; i++ )
+            for (int i = 0; i < Rows; i++)
                 Data[i][0] = a[i];
         }
 
