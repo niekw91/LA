@@ -43,6 +43,7 @@ namespace LA_Week3
 
             Matrix matrix = new Matrix(n.Columns, n.Rows);
 
+//<<<<<<< HEAD
             int vectorColumn = 0;
             while (n.Columns > vectorColumn)
             {
@@ -56,6 +57,18 @@ namespace LA_Week3
                 vectorColumn++;
             }
 
+//=======
+//            for (int i = 0; i < Rows; i++)
+//            {
+//                for (int c = 0; c < n.Columns; c++)
+//                {
+//                    for (int j = 0; j < Columns; j++)
+//                    {
+//                        matrix.Data[i][c] += (Data[i][j] * n.Data[j][c]);
+//                    }
+//                }
+//            }
+//>>>>>>> 8209ca04d6b43aa3048bd842db1eff8e934915ac
             return matrix;
         }
 
