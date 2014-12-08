@@ -107,16 +107,16 @@ namespace LA_Week3
             rotate.PutValue(2, 0, Mz * (1 - cos) - y * sin);
             rotate.PutValue(2, 0, Mz * (1 - cos) - y * sin);
             rotate.PutValue(2, 0, Mz * (1 - cos) - y * sin);
-            matrix[0, 1] = xy * (1 - cos) - z * sin;
-            matrix[1, 1] = yy + (1 - yy) * cos;
-            matrix[2, 1] = yz * (1 - cos) + x * sin;
+            //matrix[0, 1] = xy * (1 - cos) - z * sin;
+            //matrix[1, 1] = yy + (1 - yy) * cos;
+            //matrix[2, 1] = yz * (1 - cos) + x * sin;
 
-            matrix[0, 2] = xz * (1 - cos) + y * sin;
-            matrix[1, 2] = yz * (1 - cos) - x * sin;
-            matrix[2, 2] = zz + (1 - zz) * cos;
+            //matrix[0, 2] = xz * (1 - cos) + y * sin;
+            //matrix[1, 2] = yz * (1 - cos) - x * sin;
+            //matrix[2, 2] = zz + (1 - zz) * cos;
 
 
-            return new Matrix4(matrix);
+            return 
         }
     }
 }
