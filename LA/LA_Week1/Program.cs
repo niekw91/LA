@@ -13,7 +13,7 @@ namespace LA_Week1
             // Variable declaration
             double a, b, x1, x2, y1, y2, e, f, g, h;
 
-            // Table Row 1
+            Console.WriteLine("// Table Row 1");
             From1To2(6, 3, 2, 8, out a, out b);
             Console.WriteLine("y = {0} + {1}x\n", a, b);
 
@@ -21,7 +21,7 @@ namespace LA_Week1
             Console.WriteLine("(x)   ({0})    ({1})", e, g);
             Console.WriteLine("(y) = ({0}) + L({1})\n", f, h);
 
-            // Table Row 2
+            Console.WriteLine("// Table Row 2");
             From2To1(6.34, 6.34, out x1, out y1, out x2, out y2);
             Console.WriteLine("A({0} {1}) B({2} {3})\n", x1, y1, x2, y2);
 
@@ -29,14 +29,14 @@ namespace LA_Week1
             Console.WriteLine("(x)   ({0})    ({1})", e, g);
             Console.WriteLine("(y) = ({0}) + L({1})\n", f, h);
 
-            // Table Row 3
+            Console.WriteLine("// Table Row 3");
             From3To1(3, 3, 1, 1, out x1, out y1, out x2, out y2);
             Console.WriteLine("A({0} {1}) B({2} {3})\n", x1, y1, x2, y2);
 
             From3To2(3, 3, 1, 1, out a, out b);
             Console.WriteLine("y = {0} + {1}x\n", a, b);
 
-            // Table Row 4
+            Console.WriteLine("// Table Row 4");
             From1To2(0.34, 0.62, 0.34, 1.62, out a, out b);
             Console.WriteLine("y = {0} + {1}x\n", a, b);
 
@@ -44,7 +44,7 @@ namespace LA_Week1
             Console.WriteLine("(x)   ({0})    ({1})", e, g);
             Console.WriteLine("(y) = ({0}) + L({1})\n", f, h);
 
-            // Table Row 5
+            Console.WriteLine("// Table Row 5");
             From2To1(32, 64, out x1, out y1, out x2, out y2);
             Console.WriteLine("A({0} {1}) B({2} {3})\n", x1, y1, x2, y2);
 
@@ -52,14 +52,14 @@ namespace LA_Week1
             Console.WriteLine("(x)   ({0})    ({1})", e, g);
             Console.WriteLine("(y) = ({0}) + L({1})\n", f, h);
 
-            // Table Row 6
+            Console.WriteLine("// Table Row 6");
             From3To1(0.04, 3.34, 0, 1.21, out x1, out y1, out x2, out y2);
             Console.WriteLine("A({0} {1}) B({2} {3})\n", x1, y1, x2, y2);
 
             From3To2(0.04, 3.34, 0, 1.21, out a, out b);
             Console.WriteLine("y = {0} + {1}x\n", a, b);
 
-            // Table Row 7
+            Console.WriteLine("// Table Row 7");
             From1To2(234, 445, 612, 823, out a, out b);
             Console.WriteLine("y = {0} + {1}x\n", a, b);
 
@@ -67,7 +67,7 @@ namespace LA_Week1
             Console.WriteLine("(x)   ({0})    ({1})", e, g);
             Console.WriteLine("(y) = ({0}) + L({1})\n", f, h);
 
-            // Table Row 8
+            Console.WriteLine("// Table Row 8");
             From3To1(4, 2, 0, 0, out x1, out y1, out x2, out y2);
             Console.WriteLine("A({0} {1}) B({2} {3})\n", x1, y1, x2, y2);
 
@@ -79,8 +79,20 @@ namespace LA_Week1
         }
         static void From1To2(double x1, double y1, double x2, double y2, out double a, out double b)
         {
-            b = x2 - x1 != 0 ? (y2 - y1) / (x2 - x1) : 0;
-            a = y1 - (b * x1);
+            a = 0;
+            b = 0;
+            try
+            {
+                if (x2 - x1 == 0)
+                    throw new Exception(String.Format("Exception: x2 minus x1 cannot be {0}", (x2 - x1)));
+
+                b = (y2 - y1) / (x2 - x1);
+                a = y1 - (b * x1);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
         static void From2To1(double a, double b, out double x1, out double y1, out double x2, out double y2)
         {
@@ -113,10 +125,21 @@ namespace LA_Week1
             g = 1;
             h = b;
         }
-        static void From3To2(double e, double f, double g, double h, out double a, out double b)
+        static void From3To2(double e, double f, double g, double h, out double a, out double b) 
         {
-            b = g != 0 ? h / g : 0;
-            a = f - (b * e);
+            a = 0;
+            b = 0;
+            try
+            {
+                if (g == 0)
+                    throw new Exception(String.Format("Exception: g cannot be {0}", g));
+                b = h / g;
+                a = f - (b * e);
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }

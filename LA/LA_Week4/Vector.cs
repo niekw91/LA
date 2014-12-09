@@ -23,11 +23,11 @@ namespace LA_Week4
                 Console.WriteLine("Invalid sizes for vector, use 2 or 3");
             else
             {
-                Rows = 2;
-                Columns = size;
+                Rows = size;
+                Columns = 1;
 
                 Data = new double[Rows][];
-                for (int i = 0; i < Columns; i++)
+                for (int i = 0; i < Rows; i++)
                     Data[i] = new double[Columns];
             }
         }
