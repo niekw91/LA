@@ -32,7 +32,7 @@ namespace LA_Week4
             }
         }
 
-        public Vector(params int[] a)
+        public Vector(params double[] a)
         {
             Rows = a.Length;
             Columns = 1;

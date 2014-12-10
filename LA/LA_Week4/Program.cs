@@ -10,19 +10,55 @@ namespace LA_Week4
     {
         static void Main(string[] args)
         {
-            // Opgave 2
-
-            // Opgave 2a
-            Vector a = new Vector(1, 1, 1);
-            Vector b = new Vector(6, 6, 0);
-            Vector c = new Vector(1, 1, 0);
+            Vector a, b, c;
+            Console.WriteLine("// Opgave 2a");
+            a = new Vector(0, 1, 0);
+            b = new Vector(1, 0, 0);
+            c = new Vector(0, 1, 0);
             Console.WriteLine("(");
-            MultiplyVectors(b,c).Show();
+            MultiplyVectors(b, c).Show();
             Console.WriteLine(",");
             a.Show();
             Console.WriteLine(")");
 
-            //Add(a, Add(Lambda(lambda, b), Lambda(mu, c))).Show();
+            Console.WriteLine("// Opgave 2b");
+            a = new Vector(1, 1, 0);
+            b = new Vector(1, 0, 0);
+            c = new Vector(0, 1, 0);
+            Console.WriteLine("(");
+            MultiplyVectors(b, c).Show();
+            Console.WriteLine(",");
+            a.Show();
+            Console.WriteLine(")");
+
+            Console.WriteLine("// Opgave 2c");
+            a = new Vector(1, 2, 1);
+            b = new Vector(1, 2, 3);
+            c = new Vector(6, 1, 7);
+            Console.WriteLine("(");
+            MultiplyVectors(b, c).Show();
+            Console.WriteLine(",");
+            a.Show();
+            Console.WriteLine(")");
+
+            Console.WriteLine("// Opgave 2d");
+            a = new Vector(1, 1, 1);
+            b = new Vector(6, 6, 0);
+            c = new Vector(1, 1, 0);
+            Console.WriteLine("(");
+            MultiplyVectors(b, c).Show();
+            Console.WriteLine(",");
+            a.Show();
+            Console.WriteLine(")");
+
+            Console.WriteLine("\n");
+
+            Console.WriteLine("// Opgave 3b a");
+            NotZeroP(6, 3, 7, out a, out b, out c);
+            a.Show();
+            b.Show();
+            c.Show();
+
             Console.Read();
         }
 
@@ -60,25 +96,25 @@ namespace LA_Week4
             return uitproduct;
         }
 
-        static public Vector Lambda(double lambda, Vector a)
-        {
-            for (int i = 0; i < a.Rows; i++)
-                a.Data[i][0] = lambda * a.Data[i][0];
-            return a;
-        }
+        //static public Vector Lambda(double lambda, Vector a)
+        //{
+        //    for (int i = 0; i < a.Rows; i++)
+        //        a.Data[i][0] = lambda * a.Data[i][0];
+        //    return a;
+        //}
 
-        static public Vector Add(Vector a, Vector b)
-        {
-            if (a.Rows != b.Rows)
-                return null;
+        //static public Vector Add(Vector a, Vector b)
+        //{
+        //    if (a.Rows != b.Rows)
+        //        return null;
 
-            Vector result = new Vector(a.Rows);
+        //    Vector result = new Vector(a.Rows);
 
-            for (int i = 0; i < a.Rows; i++)
-                result.Data[i][0] = a.Data[i][0] + b.Data[i][0];
+        //    for (int i = 0; i < a.Rows; i++)
+        //        result.Data[i][0] = a.Data[i][0] + b.Data[i][0];
 
-            return result;
-        }
+        //    return result;
+        //}
 
         static public Vector MultiplyVectors(Vector a, Vector b)
         {
@@ -93,25 +129,60 @@ namespace LA_Week4
             return result;
         }
 
-        static double hoek(Vector a, Vector b) 
+        //static double hoek(Vector a, Vector b) 
+        //{
+        //    double vecA = 0;
+        //    double vecB = 0;
+
+        //    for (int i = 0; i < a.Rows; i++)
+        //    {
+        //        vecA += Math.Pow(a.Data[i][0], 2);
+        //        vecB += Math.Pow(b.Data[i][0], 2);
+        //    }
+
+        //    // Calculate norm of vectors
+        //    double normA = Math.Sqrt(vecA);
+        //    double normB = Math.Sqrt(vecB);
+
+        //    // Determine angle
+        //    double angle = inproduct(a, b) / (normA * normB);
+
+        //    return Math.Cos(angle);
+        //}
+
+        static public void NotZeroP(double p, double q, double r, out Vector vecP, out Vector vecQ, out Vector vecR)
         {
-            double vecA = 0;
-            double vecB = 0;
+            if (p == 0)
+                throw new Exception(String.Format("Error: p cannot be {0}",p));
 
-            for (int i = 0; i < a.Rows; i++)
-            {
-                vecA += Math.Pow(a.Data[i][0], 2);
-                vecB += Math.Pow(b.Data[i][0], 2);
-            }
+            double s = p + q + r;
+            vecP = new Vector(s/p, 0, 0);
+            vecQ = new Vector(q * -1, p, 0);
+            vecR = new Vector(r * -1, 0, p);
+        }
 
-            // Calculate norm of vectors
-            double normA = Math.Sqrt(vecA);
-            double normB = Math.Sqrt(vecB);
+        static public void NotZeroQ(double q, double r, out Vector vecP, out Vector vecQ, out Vector vecR)
+        {
+            double p = 0;
+            if (q == 0)
+                throw new Exception(String.Format("Error: q cannot be {0}", q));
 
-            // Determine angle
-            double angle = inproduct(a, b) / (normA * normB);
+            double s = p + q + r;
+            vecP = new Vector(0, s/q, 0);
+            vecQ = new Vector(q, 0, 0);
+            vecR = new Vector(0, r * -1, q);
+        }
 
-            return Math.Cos(angle);
+        static public void NotZeroR(double r, out Vector vecP, out Vector vecQ, out Vector vecR)
+        {
+            double p = 0, q = 0;
+            if (r == 0)
+                throw new Exception(String.Format("Error: r cannot be {0}", r));
+
+            double s = p + q + r;
+            vecP = new Vector(0, 0, s / r);
+            vecQ = new Vector(1, 0, 0);
+            vecR = new Vector(0, 1, 0);
         }
     }
 }

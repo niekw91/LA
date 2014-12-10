@@ -81,18 +81,12 @@ namespace LA_Week1
         {
             a = 0;
             b = 0;
-            try
-            {
-                if (x2 - x1 == 0)
-                    throw new Exception(String.Format("Exception: x2 minus x1 cannot be {0}", (x2 - x1)));
 
-                b = (y2 - y1) / (x2 - x1);
-                a = y1 - (b * x1);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
+            if (x2 - x1 == 0)
+                throw new Exception(String.Format("Exception: x2 minus x1 cannot be {0}", (x2 - x1)));
+
+            b = (y2 - y1) / (x2 - x1);
+            a = y1 - (b * x1);
         }
         static void From2To1(double a, double b, out double x1, out double y1, out double x2, out double y2)
         {
@@ -125,21 +119,15 @@ namespace LA_Week1
             g = 1;
             h = b;
         }
-        static void From3To2(double e, double f, double g, double h, out double a, out double b) 
+        static void From3To2(double e, double f, double g, double h, out double a, out double b)
         {
             a = 0;
             b = 0;
-            try
-            {
-                if (g == 0)
-                    throw new Exception(String.Format("Exception: g cannot be {0}", g));
-                b = h / g;
-                a = f - (b * e);
-            }
-            catch(Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
+
+            if (g == 0)
+                throw new Exception(String.Format("Exception: g cannot be {0}", g));
+            b = h / g;
+            a = f - (b * e);
         }
     }
 }
