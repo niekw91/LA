@@ -49,5 +49,10 @@ namespace LA_Week4
         {
             Data[row][0] = value;
         }
+
+        public double GetValue(int row)
+        {
+            return Data[row][0];
+        }
     }
 }
