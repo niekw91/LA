@@ -10,7 +10,7 @@ namespace LA_Week4
     {
         static void Main(string[] args)
         {
-            //Opgave2();
+            Opgave2();
 
             Opgave3();
 
@@ -28,9 +28,9 @@ namespace LA_Week4
             r = 7;
             s = 12;
             InproductToVector(p, q, r, s, out a, out b, out c);
-            Console.WriteLine("({0})    ({1})    ({2})", a.GetValue(0), b.GetValue(0), c.GetValue(0));
-            Console.WriteLine("({0}) + L({1}) + U({2})", a.GetValue(1), b.GetValue(1), c.GetValue(1));
-            Console.WriteLine("({0})    ({1})    ({2})\n", a.GetValue(2), b.GetValue(2), c.GetValue(2));
+            Console.WriteLine("({0})    ({1})    ({2})", a.Value(0), b.Value(0), c.Value(0));
+            Console.WriteLine("({0}) + L({1}) + U({2})", a.Value(1), b.Value(1), c.Value(1));
+            Console.WriteLine("({0})    ({1})    ({2})\n", a.Value(2), b.Value(2), c.Value(2));
 
             Console.WriteLine("// Opgave 3b b");
             p = 0;
@@ -38,9 +38,9 @@ namespace LA_Week4
             r = 13;
             s = 4;
             InproductToVector(p, q, r, s, out a, out b, out c);
-            Console.WriteLine("({0})    ({1})    ({2})", a.GetValue(0), b.GetValue(0), c.GetValue(0));
-            Console.WriteLine("({0}) + L({1}) + U({2})", a.GetValue(1), b.GetValue(1), c.GetValue(1));
-            Console.WriteLine("({0})    ({1})    ({2})\n", a.GetValue(2), b.GetValue(2), c.GetValue(2));
+            Console.WriteLine("({0})    ({1})    ({2})", a.Value(0), b.Value(0), c.Value(0));
+            Console.WriteLine("({0}) + L({1}) + U({2})", a.Value(1), b.Value(1), c.Value(1));
+            Console.WriteLine("({0})    ({1})    ({2})\n", a.Value(2), b.Value(2), c.Value(2));
 
             Console.WriteLine("// Opgave 3b c");
             p = 0;
@@ -48,9 +48,9 @@ namespace LA_Week4
             r = 3;
             s = 18;
             NotZeroR(p, q, r, s, out a, out b, out c);
-            Console.WriteLine("({0})    ({1})    ({2})", a.GetValue(0), b.GetValue(0), c.GetValue(0));
-            Console.WriteLine("({0}) + L({1}) + U({2})", a.GetValue(1), b.GetValue(1), c.GetValue(1));
-            Console.WriteLine("({0})    ({1})    ({2})\n", a.GetValue(2), b.GetValue(2), c.GetValue(2));
+            Console.WriteLine("({0})    ({1})    ({2})", a.Value(0), b.Value(0), c.Value(0));
+            Console.WriteLine("({0}) + L({1}) + U({2})", a.Value(1), b.Value(1), c.Value(1));
+            Console.WriteLine("({0})    ({1})    ({2})\n", a.Value(2), b.Value(2), c.Value(2));
 
             Console.WriteLine("// Opgave 3b d");
             p = 1;
@@ -58,9 +58,9 @@ namespace LA_Week4
             r = 0;
             s = 22;
             InproductToVector(p, q, r, s, out a, out b, out c);
-            Console.WriteLine("({0})    ({1})    ({2})", a.GetValue(0), b.GetValue(0), c.GetValue(0));
-            Console.WriteLine("({0}) + L({1}) + U({2})", a.GetValue(1), b.GetValue(1), c.GetValue(1));
-            Console.WriteLine("({0})    ({1})    ({2})\n", a.GetValue(2), b.GetValue(2), c.GetValue(2));
+            Console.WriteLine("({0})    ({1})    ({2})", a.Value(0), b.Value(0), c.Value(0));
+            Console.WriteLine("({0}) + L({1}) + U({2})", a.Value(1), b.Value(1), c.Value(1));
+            Console.WriteLine("({0})    ({1})    ({2})\n", a.Value(2), b.Value(2), c.Value(2));
 
             Console.WriteLine("// Opgave 3b e");
             p = 0;
@@ -68,9 +68,9 @@ namespace LA_Week4
             r = -1;
             s = 8;
             InproductToVector(p, q, r, s, out a, out b, out c);
-            Console.WriteLine("({0})    ({1})    ({2})", a.GetValue(0), b.GetValue(0), c.GetValue(0));
-            Console.WriteLine("({0}) + L({1}) + U({2})", a.GetValue(1), b.GetValue(1), c.GetValue(1));
-            Console.WriteLine("({0})    ({1})    ({2})\n", a.GetValue(2), b.GetValue(2), c.GetValue(2));
+            Console.WriteLine("({0})    ({1})    ({2})", a.Value(0), b.Value(0), c.Value(0));
+            Console.WriteLine("({0}) + L({1}) + U({2})", a.Value(1), b.Value(1), c.Value(1));
+            Console.WriteLine("({0})    ({1})    ({2})\n", a.Value(2), b.Value(2), c.Value(2));
 
             Console.WriteLine("// Opgave 3b f");
             p = 1;
@@ -78,9 +78,9 @@ namespace LA_Week4
             r = 1;
             s = 3;
             InproductToVector(p, q, r, s, out a, out b, out c);
-            Console.WriteLine("({0})    ({1})    ({2})", a.GetValue(0), b.GetValue(0), c.GetValue(0));
-            Console.WriteLine("({0}) + L({1}) + U({2})", a.GetValue(1), b.GetValue(1), c.GetValue(1));
-            Console.WriteLine("({0})    ({1})    ({2})\n", a.GetValue(2), b.GetValue(2), c.GetValue(2));
+            Console.WriteLine("({0})    ({1})    ({2})", a.Value(0), b.Value(0), c.Value(0));
+            Console.WriteLine("({0}) + L({1}) + U({2})", a.Value(1), b.Value(1), c.Value(1));
+            Console.WriteLine("({0})    ({1})    ({2})\n", a.Value(2), b.Value(2), c.Value(2));
         }
 
         private static void Opgave2()
@@ -91,45 +91,45 @@ namespace LA_Week4
             b = new Vector(1, 0, 0);
             c = new Vector(0, 1, 0);
             uitproduct = Uitproduct(b, c);
-            Console.WriteLine("s : {0}x + {1}y + {2}z = {3}\n", uitproduct.GetValue(0), uitproduct.GetValue(1), uitproduct.GetValue(2), inproduct(a, uitproduct));
+            Console.WriteLine("s : {0}x + {1}y + {2}z = {3}\n", uitproduct.Value(0), uitproduct.Value(1), uitproduct.Value(2), inproduct(a, uitproduct));
 
             Console.WriteLine("// Opgave 2b");
             a = new Vector(1, 1, 0);
             b = new Vector(1, 0, 0);
             c = new Vector(0, 1, 0);
             uitproduct = Uitproduct(b, c);
-            Console.WriteLine("s : {0}x + {1}y + {2}z = {3}\n", uitproduct.GetValue(0), uitproduct.GetValue(1), uitproduct.GetValue(2), inproduct(a, uitproduct));
+            Console.WriteLine("s : {0}x + {1}y + {2}z = {3}\n", uitproduct.Value(0), uitproduct.Value(1), uitproduct.Value(2), inproduct(a, uitproduct));
 
             Console.WriteLine("// Opgave 2c");
             a = new Vector(1, 2, 1);
             b = new Vector(1, 2, 3);
             c = new Vector(6, 1, 7);
             uitproduct = Uitproduct(b, c);
-            Console.WriteLine("s : {0}x + {1}y + {2}z = {3}\n", uitproduct.GetValue(0), uitproduct.GetValue(1), uitproduct.GetValue(2), inproduct(a, uitproduct));
+            Console.WriteLine("s : {0}x + {1}y + {2}z = {3}\n", uitproduct.Value(0), uitproduct.Value(1), uitproduct.Value(2), inproduct(a, uitproduct));
 
             Console.WriteLine("// Opgave 2d");
             a = new Vector(1, 1, 1);
             b = new Vector(6, 6, 0);
             c = new Vector(1, 1, 0);
             uitproduct = Uitproduct(b, c);
-            Console.WriteLine("s : {0}x + {1}y + {2}z = {3}\n", uitproduct.GetValue(0), uitproduct.GetValue(1), uitproduct.GetValue(2), inproduct(a, uitproduct));
+            Console.WriteLine("s : {0}x + {1}y + {2}z = {3}\n", uitproduct.Value(0), uitproduct.Value(1), uitproduct.Value(2), inproduct(a, uitproduct));
         }
 
         // Opgave 1a
-        static double inproduct(Vector a, Vector b)
-        {
-            double inproduct = 0;
+static double inproduct(Vector a, Vector b)
+{
+    double inproduct = 0;
 
-            // Check if vectors have same dimension
-            if (a.Rows != b.Rows)
-                return inproduct;
+    // Check if vectors have same dimension
+    if (a.Rows != b.Rows)
+        return inproduct;
 
-            // Calculate inproduct
-            for (int i = 0; i < a.Rows; i++)
-                inproduct += a.Data[i][0] * b.Data[i][0];
+    // Calculate inproduct
+    for (int i = 0; i < a.Rows; i++)
+        inproduct += a.Value(i) * b.Value(i);
 
-            return inproduct;
-        }
+    return inproduct;
+}
 
         // Opgave 1b
         static Vector Uitproduct(Vector a, Vector b)
@@ -142,48 +142,48 @@ namespace LA_Week4
 
             // Calculate uitproduct
             uitproduct = new Vector(0,0,0);
-            uitproduct.PutValue(0, a.Data[1][0] * b.Data[2][0] - a.Data[2][0] * b.Data[1][0]);
-            uitproduct.PutValue(1, a.Data[2][0] * b.Data[0][0] - a.Data[0][0] * b.Data[2][0]);
-            uitproduct.PutValue(2, a.Data[0][0] * b.Data[1][0] - a.Data[1][0] * b.Data[0][0]);
+            uitproduct.PutValue(0, a.Value(1) * b.Value(2) - a.Value(2) * b.Value(1));
+            uitproduct.PutValue(1, a.Value(2) * b.Value(0) - a.Value(0) * b.Value(2));
+            uitproduct.PutValue(2, a.Value(0) * b.Value(1) - a.Value(1) * b.Value(0));
 
             return uitproduct;
         }
 
-        static public void NotZeroP(double p, double q, double r, double s, out Vector vecP, out Vector vecQ, out Vector vecR)
-        {
-            if (p == 0)
-                throw new Exception(String.Format("Error: p cannot be {0}",p));
+static public void NotZeroP(double p, double q, double r, double s, out Vector vecP, out Vector vecQ, out Vector vecR)
+{
+    if (p == 0)
+        throw new Exception(String.Format("Error: p cannot be {0}",p));
 
-            vecP = new Vector(s/p, 0, 0);
-            vecQ = new Vector(-q, p, 0);
-            vecR = new Vector(-r, 0, p);
-        }
+    vecP = new Vector(s/p, 0, 0);
+    vecQ = new Vector(-q, p, 0);
+    vecR = new Vector(-r, 0, p);
+}
 
-        static public void NotZeroQ(double p, double q, double r, double s, out Vector vecP, out Vector vecQ, out Vector vecR)
-        {
-            if (p != 0)
-                throw new Exception(String.Format("Error: p cannot be {0}", p));
-            if (q == 0)
-                throw new Exception(String.Format("Error: q cannot be {0}", q));
+static public void NotZeroQ(double p, double q, double r, double s, out Vector vecP, out Vector vecQ, out Vector vecR)
+{
+    if (p != 0)
+        throw new Exception(String.Format("Error: p cannot be {0}", p));
+    if (q == 0)
+        throw new Exception(String.Format("Error: q cannot be {0}", q));
 
-            vecP = new Vector(0, s/q, 0);
-            vecQ = new Vector(q, 0, 0);
-            vecR = new Vector(0, -r, q);
-        }
+    vecP = new Vector(0, s/q, 0);
+    vecQ = new Vector(q, 0, 0);
+    vecR = new Vector(0, -r, q);
+}
 
-        static public void NotZeroR(double p, double q, double r, double s, out Vector vecP, out Vector vecQ, out Vector vecR)
-        {
-            if (p != 0)
-                throw new Exception(String.Format("Error: p cannot be {0}", p));
-            if (q != 0)
-                throw new Exception(String.Format("Error: q cannot be {0}", q));
-            if (r == 0)
-                throw new Exception(String.Format("Error: r cannot be {0}", r));
+static public void NotZeroR(double p, double q, double r, double s, out Vector vecP, out Vector vecQ, out Vector vecR)
+{
+    if (p != 0)
+        throw new Exception(String.Format("Error: p cannot be {0}", p));
+    if (q != 0)
+        throw new Exception(String.Format("Error: q cannot be {0}", q));
+    if (r == 0)
+        throw new Exception(String.Format("Error: r cannot be {0}", r));
 
-            vecP = new Vector(0, 0, s / r);
-            vecQ = new Vector(1, 0, 0);
-            vecR = new Vector(0, 1, 0);
-        }
+    vecP = new Vector(0, 0, s / r);
+    vecQ = new Vector(1, 0, 0);
+    vecR = new Vector(0, 1, 0);
+}
 
         static public void InproductToVector(double p, double q, double r, double s, out Vector vecP, out Vector vecQ, out Vector vecR)
         {
